@@ -4,11 +4,11 @@ Summary(pl):	Modu³ perla Math-PRSG
 Name:		perl-Math-PRSG
 Version:	1.0
 Release:	3
-Copyright:	GPL
+License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/Math-PRSG-%{version}.tar.gz
-Patch:		perl-Math-PRSG-paths.patch
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/Math-PRSG-%{version}.tar.gz
+Patch0:		perl-Math-PRSG-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
@@ -16,7 +16,7 @@ Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Math-PRSG - interface to pseudo random sequence generator function. 
+Math-PRSG - interface to pseudo random sequence generator function.
 
 %description -l pl
 Math-PRSG - interfejs do funkcji generowania pseudolosowych sekwencji.
