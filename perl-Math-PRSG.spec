@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Math
 %define	pnam	PRSG
@@ -6,7 +10,8 @@ Summary(pl):	Modu³ perla Math::PRSG
 Name:		perl-Math-PRSG
 Version:	1.0
 Release:	8
-License:	GPL
+# if used in a product, Systemics should be given attribution as the author
+License:	free use, distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	4f0c32973d5b03d2a665b6ac6ec04b9c
@@ -28,7 +33,10 @@ Math::PRSG - interfejs do funkcji generowania pseudolosowych sekwencji.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
