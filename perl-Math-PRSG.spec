@@ -25,7 +25,7 @@ Math::PRSG - interfejs do funkcji generowania pseudolosowych sekwencji.
 %patch -p1
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
