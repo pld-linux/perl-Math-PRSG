@@ -3,14 +3,14 @@ Summary:	Math-PRSG perl module
 Summary(pl):	Modu³ perla Math-PRSG
 Name:		perl-Math-PRSG
 Version:	1.0
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Math/Math-PRSG-%{version}.tar.gz
 Patch0:		perl-Math-PRSG-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl >= 5.005_03-14
+BuildRequires:	perl >= 5.6
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,15 +33,7 @@ perl Makefile.PL
 rm -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-strip --strip-unneeded $RPM_BUILD_ROOT/%{perl_sitearch}/auto/Math/PRSG/*.so
 
-(
-  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Math/PRSG
-  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
-)
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -53,7 +45,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/Math/PRSG.pm
 
 %dir %{perl_sitearch}/auto/Math/PRSG
-%{perl_sitearch}/auto/Math/PRSG/.packlist
 %{perl_sitearch}/auto/Math/PRSG/PRSG.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Math/PRSG/PRSG.so
 
