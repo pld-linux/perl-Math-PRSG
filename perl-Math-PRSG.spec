@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Math
-%define	pnam	PRSG
+%define		pdir	Math
+%define		pnam	PRSG
 Summary:	Math::PRSG perl module
 Summary(pl):	Modu³ perla Math::PRSG
 Name:		perl-Math-PRSG
