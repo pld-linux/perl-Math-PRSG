@@ -1,0 +1,24 @@
+--- Math-PRSG-1.0/examples/prsg_driver.pl.perlpath	Mon May  6 10:59:35 1996
++++ Math-PRSG-1.0/examples/prsg_driver.pl	Wed May 12 00:11:49 1999
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl -w
++#!/usr/bin/perl -w
+ 
+ use Utils::TrulyRandom;
+ use Crypt::SHA;
+--- Math-PRSG-1.0/PRSG.pm.perlpath	Wed May 22 13:28:16 1996
++++ Math-PRSG-1.0/PRSG.pm	Wed May 12 00:11:49 1999
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/perl -w -I/usr/local/lib/perl5
++#! /usr/bin/perl -w -I/usr/local/lib/perl5
+ 
+ #
+ # Copyright (C) 1995, 1996 Systemics Ltd (http://www.systemics.com/)
+--- Math-PRSG-1.0/Makefile.PL.perlpath	Wed May 22 12:42:12 1996
++++ Math-PRSG-1.0/Makefile.PL	Wed May 12 00:11:49 1999
+@@ -1,4 +1,4 @@
+-#! /usr/local/bin/perl
++#! /usr/bin/perl
+ 
+ use ExtUtils::MakeMaker;
+ # See lib/ExtUtils/MakeMaker.pm for details of how to influence
