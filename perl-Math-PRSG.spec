@@ -5,12 +5,12 @@ Summary:	Math::PRSG perl module
 Summary(pl):	Modu³ perla Math::PRSG
 Name:		perl-Math-PRSG
 Version:	1.0
-Release:	7
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl >= 5.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,7 +25,8 @@ Math::PRSG - interfejs do funkcji generowania pseudolosowych sekwencji.
 %patch -p1
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
@@ -39,8 +40,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc examples/prsg_driver.pl
-%{perl_sitearch}/Math/PRSG.pm
-%dir %{perl_sitearch}/auto/Math/PRSG
-%{perl_sitearch}/auto/Math/PRSG/PRSG.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Math/PRSG/PRSG.so
+%{perl_vendorarch}/Math/PRSG.pm
+%dir %{perl_vendorarch}/auto/Math/PRSG
+%{perl_vendorarch}/auto/Math/PRSG/PRSG.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Math/PRSG/PRSG.so
 %{_mandir}/man3/*
