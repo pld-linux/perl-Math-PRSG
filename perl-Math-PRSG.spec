@@ -3,7 +3,7 @@ Summary:	Math-PRSG perl module
 Summary(pl):	Modu³ perla Math-PRSG
 Name:		perl-Math-PRSG
 Version:	1.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
