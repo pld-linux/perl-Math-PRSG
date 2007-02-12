@@ -6,7 +6,7 @@
 %define		pdir	Math
 %define		pnam	PRSG
 Summary:	Math::PRSG perl module
-Summary(pl):	Modu≥ perla Math::PRSG
+Summary(pl.UTF-8):   Modu≈Ç perla Math::PRSG
 Name:		perl-Math-PRSG
 Version:	1.0
 Release:	9
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Math::PRSG - interface to pseudo random sequence generator function.
 
-%description -l pl
+%description -l pl.UTF-8
 Math::PRSG - interfejs do funkcji generowania pseudolosowych sekwencji.
 
 %prep
