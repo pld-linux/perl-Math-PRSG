@@ -9,7 +9,7 @@ Summary:	Math::PRSG perl module
 Summary(pl.UTF-8):	Moduł perla Math::PRSG
 Name:		perl-Math-PRSG
 Version:	1.0
-Release:	9
+Release:	10
 # if used in a product, Systemics should be given attribution as the author
 License:	free use, distributable
 Group:		Development/Languages/Perl
