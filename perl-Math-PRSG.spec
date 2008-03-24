@@ -5,26 +5,36 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Math
 %define		pnam	PRSG
-Summary:	Math::PRSG perl module
-Summary(pl.UTF-8):	Moduł perla Math::PRSG
+Summary:	Math::PRSG - Perl interface to pseudo random sequence generator function
+Summary(pl.UTF-8):	Math::PRSG - interfejs Perla do funkcji generatora ciągów pseudolosowych
 Name:		perl-Math-PRSG
 Version:	1.0
 Release:	10
 # if used in a product, Systemics should be given attribution as the author
 License:	free use, distributable
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Math/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	4f0c32973d5b03d2a665b6ac6ec04b9c
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 4.1-13
+URL:		http://search.cpan.org/dist/Math-PRSG/
 BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Math::PRSG - interface to pseudo random sequence generator function.
+Math::PRSG is a Perl interface to pseudo random sequence generator
+function. It implements a (159, 31, 0) LFSR, giving a period of 160
+bits. This can then be used as a RNG if seeded well (ie. with 160 bits
+of entropy) and if the output is fed through a message digest function
+(in order to prevent any prediction).
 
 %description -l pl.UTF-8
-Math::PRSG - interfejs do funkcji generowania pseudolosowych sekwencji.
+Math::PRSG to perlowy interfejs do funkcji generatora ciągów
+pseudolosowych. Implementuje funkcję LFSR (159, 31, 0) mającą okres
+160-bitowy. Może być używany jako generator liczb losowych jeśli
+zostanie dobrze zasilony (160 bitami entropii), a wyjście jest
+przekazywane przez funkcję skrótu (w celu uniknięcia
+przewidywalności).
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
