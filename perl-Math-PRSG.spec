@@ -63,6 +63,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc examples/prsg_driver.pl
 %{perl_vendorarch}/Math/PRSG.pm
 %dir %{perl_vendorarch}/auto/Math/PRSG
-%{perl_vendorarch}/auto/Math/PRSG/PRSG.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Math/PRSG/PRSG.so
 %{_mandir}/man3/*
