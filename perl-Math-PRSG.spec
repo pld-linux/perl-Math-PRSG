@@ -8,7 +8,7 @@ Summary:	Math::PRSG - Perl interface to pseudo random sequence generator functio
 Summary(pl.UTF-8):	Math::PRSG - interfejs Perla do funkcji generatora ciągów pseudolosowych
 Name:		perl-Math-PRSG
 Version:	1.0
-Release:	24
+Release:	25
 # if used in a product, Systemics should be given attribution as the author
 License:	free use, distributable
 Group:		Development/Languages/Perl
